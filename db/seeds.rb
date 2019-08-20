@@ -11,10 +11,9 @@ Article.destroy_all
 
 puts 'Creating fake articles...'
 10.times do
-  article = Article.new(
+  Article.create!(
     title:   Faker::Book.title,
     content: Faker::Lorem.paragraph
   )
-  article.save!
 end
 puts "Finished creating #{Article.count} articles!"
